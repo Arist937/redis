@@ -37,6 +37,7 @@ for gcda_file in *.gcda; do
         percentage="${gcov_output#$prefix}"
 
         # Run gcov on gcda file
+        echo "$gcda_base: $percentage lines"
         echo "$gcda_base: $percentage lines" >> $output_file 2> "/dev/null"
     fi
 done

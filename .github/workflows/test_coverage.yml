@@ -1,0 +1,17 @@
+name: Test Coverage
+
+on:
+  push:
+    branches:
+      - testcoverage
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest 
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run script
+      run: ./testcoverage.sh
